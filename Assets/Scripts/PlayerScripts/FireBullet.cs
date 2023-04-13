@@ -23,6 +23,10 @@ public class FireBullet : MonoBehaviour
     Vector3 initialPosition;
     Quaternion initialRotation;
 
+    // Variables for buffered firing
+    float fireTimer = 0;
+    bool onCooldown = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,12 +39,21 @@ public class FireBullet : MonoBehaviour
         // Updates mouse world position
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
-        initialPosition = firePoint.position;
-        initialRotation = firePoint.rotation;
-
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButton(0))
         {
-            Fire();
+            if (!onCooldown)
+            {
+                Fire();
+                onCooldown = true;
+            }
+        }
+
+        if (onCooldown)
+            fireTimer += Time.deltaTime;
+        if( fireTimer > 0.5)
+        {
+            fireTimer = 0;
+            onCooldown = false;
         }
 
         
@@ -55,7 +68,7 @@ public class FireBullet : MonoBehaviour
 
     public void Fire()
     {
-        GameObject bullet = Instantiate(bulletPrefab, initialPosition, initialRotation);
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Physics2D.IgnoreCollision(bullet.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * 10f,ForceMode2D.Impulse);
