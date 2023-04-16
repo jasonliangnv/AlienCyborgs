@@ -537,6 +537,7 @@ GameObject:
   - component: {fileID: 657744850}
   - component: {fileID: 657744851}
   - component: {fileID: 657744852}
+  - component: {fileID: 657744853}
   m_Layer: 0
   m_Name: EnemyContainer
   m_TagString: Untagged
@@ -659,6 +660,18 @@ MonoBehaviour:
   EnemyFirePoint: {fileID: 568020439}
   bulletSpeed: 5
   fireRate: 0.3
+--- !u!114 &657744853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657744845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a55b27d4c619c242a876490fcbe5392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &719074364
 GameObject:
   m_ObjectHideFlags: 0
