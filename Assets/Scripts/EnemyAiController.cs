@@ -18,8 +18,9 @@ public class EnemyAiController : MonoBehaviour
     // Varibles for repelling player
     public float pushForce = .4f;
     public float pushDistance = .02f;
-
+    public float stopDistance = 2f;
     // Way point distanace for A*
+    // Note: this should in general be <= the node size set under A*Grid gameobject
     public float wayPointDistanace = .28f;
 
     private Transform playerPos;
@@ -87,16 +88,18 @@ public class EnemyAiController : MonoBehaviour
         }
 
         // If too close to player move out the way
-        if (Vector3.Distance(transform.position, player.transform.position) < pushDistance)
+        // NOTE: this can cause weird behaviour such as being pushed inside walls
+        /*
+        if (Vector3.Distance(transform.position, player.transform.position) < 2f)
         {
             Vector3 pushDirection = (transform.position - player.transform.position).normalized;
             transform.position += pushDirection * pushForce * Time.deltaTime;
         }
-
+        */
 
 
         // A* waypoint code
-        // If path is null i.e. at the player contantly face them
+        // If path is null i.e. at the player then constantly face them
         if (curPath == null)
         {
             Vector2 direction = playerPos.position - transform.position;
@@ -107,9 +110,9 @@ public class EnemyAiController : MonoBehaviour
         }
 
 
+        // Below serves no real purpose 
         if (curWayPoint >= curPath.vectorPath.Count)
         {
-
             reachedEndOfPath = true;
             return;
         }
@@ -124,19 +127,9 @@ public class EnemyAiController : MonoBehaviour
         
         if (distance < wayPointDistanace)
         {
-            //Debug.Log("updating way point! ");
+            // Update way point
             curWayPoint++;
-            if (curWayPoint >= curPath.vectorPath.Count)
-            {
-                Vector2 direction = playerPos.position - transform.position;
-                direction.Normalize();
-                float inangle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
-                transform.rotation = Quaternion.Euler(Vector3.forward * inangle);
-                //Debug.Log("at palyer?");
-                //player.GetComponent<PlayerHealth>().TakeDamage(10);
-                reachedEndOfPath = true;
-                return;
-            }
+          
         }
 
         // Get next way point // Get current transform // Calcualte direction to face along path // rotate ai smoothly to always face along path
@@ -148,8 +141,8 @@ public class EnemyAiController : MonoBehaviour
         transform.rotation = Quaternion.Lerp(transform.rotation, newRot, 3 * Time.deltaTime);
 
 
-        //move toward player based of way point dist
-        if (Vector2.Distance(transform.position, playerPos.position) > wayPointDistanace)
+        //move toward player based on a user set distance. Ai will stop moving toward player at set distance
+        if (Vector2.Distance(transform.position, playerPos.position) > stopDistance)
         {
             // If the distance from cur pos to player is >  way point dist // move toward player
             transform.position = Vector2.MoveTowards(transform.position, curPath.vectorPath[curWayPoint], speed * Time.deltaTime);

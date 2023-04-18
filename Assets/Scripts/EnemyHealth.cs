@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour
+public class EnemyHealth : MonoBehaviour
 {
     // Enemy HP
     private int health;
@@ -16,7 +16,7 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(mhealth == 0)
+        if (mhealth == 0)
         {
             Destroy(gameObject);
         }
@@ -24,10 +24,10 @@ public class EnemyController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Bullet")
-            {
-                mhealth--;
-            }
-                
+        if (collision.gameObject.tag == "Bullet")
+        {
+            mhealth--;
+        }
+
     }
 }
