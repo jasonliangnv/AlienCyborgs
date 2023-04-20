@@ -435,8 +435,12 @@ MonoBehaviour:
   - {fileID: 296906363}
   - {fileID: 1499365395}
   - {fileID: 1563797718}
+  enemies: []
   enemyPrefab: {fileID: 2910522306894518113, guid: f52fe79ca66e8b840b6692ad3f215ebe, type: 3}
+  running: 0
   spawning: 0
+  currentWave: 0
+  numWaves: 3
 --- !u!212 &118365011
 SpriteRenderer:
   m_ObjectHideFlags: 0
