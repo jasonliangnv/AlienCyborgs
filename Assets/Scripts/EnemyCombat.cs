@@ -19,6 +19,11 @@ public class EnemyCombat : MonoBehaviour
 
     private float timeSinceLastFire = 0f;
 
+    private void Start()
+    {
+        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+
     // Update is called once per frame
     void Update()
     {
