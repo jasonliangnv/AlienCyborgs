@@ -134,8 +134,9 @@ public class EnemyAiController : MonoBehaviour
 
         // Get next way point // Get current transform // Calcualte direction to face along path // rotate ai smoothly to always face along path
         Vector2 nextWayPoint = (Vector2)curPath.vectorPath[curWayPoint];
+        Vector2 playerVec = (Vector2)playerPos.position;
         Vector2 currPos = transform.position;
-        Vector2 newDirection = (nextWayPoint - currPos).normalized;
+        Vector2 newDirection = (playerVec - currPos).normalized;
         float angle = Mathf.Atan2(newDirection.y, newDirection.x) * Mathf.Rad2Deg - 90f;
         Quaternion newRot = Quaternion.Euler(0, 0, angle);
         transform.rotation = Quaternion.Lerp(transform.rotation, newRot, 3 * Time.deltaTime);

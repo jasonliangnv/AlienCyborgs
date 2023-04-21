@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 2910522306894518138}
   m_Layer: 0
   m_Name: EnemyContainer
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67,7 +67,7 @@ Transform:
   - {fileID: 2910522307491500496}
   - {fileID: 2910522306866674043}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2910522306894518140
 MonoBehaviour:
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1bd1fd6c0d1ac648823cfc2b67f4a90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 5385334568824546489, guid: d232bd1cfa83eaf4b86102b4470c6d43, type: 3}
+  bulletPrefab: {fileID: 5836400646138657750, guid: d94558bd4190ef54babb7acfcf5e38c1, type: 3}
   playerTransform: {fileID: 0}
   EnemyFirePoint: {fileID: 2910522306866674043}
   bulletSpeed: 5

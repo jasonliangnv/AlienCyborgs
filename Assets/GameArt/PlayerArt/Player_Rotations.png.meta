@@ -127,14 +127,14 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 9
-      pivot: {x: 0.5, y: 0.59375}
+      pivot: {x: 0.5, y: 0.625}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 504de5c8f6585214caf048ffc3983a0f
-      internalID: -1962946546
+      spriteID: cb594e49ad299674e8883e4681e57d2e
+      internalID: -1289068664
       vertices: []
       indices: 
       edges: []
@@ -148,14 +148,14 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 9
-      pivot: {x: 0.4375, y: 0.59375}
+      pivot: {x: 0.5, y: 0.625}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1bc0dc19351d08343ba412f4e9c7e7f0
-      internalID: -815697985
+      spriteID: 2baf4e1dc587302469524c51166fbf32
+      internalID: -552920503
       vertices: []
       indices: 
       edges: []
@@ -169,14 +169,14 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 9
-      pivot: {x: 0.5, y: 0.59375}
+      pivot: {x: 0.5, y: 0.625}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6a7daf02e630cd49b662bd5250f3714
-      internalID: 1079405058
+      spriteID: 7d2f9295fd2baf9418b53bc7229b2ddb
+      internalID: -1637351485
       vertices: []
       indices: 
       edges: []
@@ -190,14 +190,14 @@ TextureImporter:
         width: 16
         height: 32
       alignment: 9
-      pivot: {x: 0.5, y: 0.59375}
+      pivot: {x: 0.5, y: 0.625}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e412d3e63cb42cf4ca53b24f4432ea90
-      internalID: -2071785667
+      spriteID: 6f1f9a1a6c53fb3468a5097811c00823
+      internalID: -754039209
       vertices: []
       indices: 
       edges: []
@@ -213,10 +213,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Player_Rotations_3: -2071785667
-      Player_Rotations_2: 1079405058
-      Player_Rotations_1: -815697985
-      Player_Rotations_0: -1962946546
+      Player_Rotations_3: -754039209
+      Player_Rotations_2: -1637351485
+      Player_Rotations_1: -552920503
+      Player_Rotations_0: -1289068664
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
