@@ -6,6 +6,7 @@ public class DoorController : MonoBehaviour
 {
   
     public GameObject openTxt;
+    public bool locked = false;
 
     private bool canOpen = false;
     private void OnTriggerEnter2D(Collider2D collision)
@@ -26,9 +27,9 @@ public class DoorController : MonoBehaviour
     }
     private void Update()
     {
-        if (canOpen && Input.GetKeyDown(KeyCode.E))
+        if (canOpen && !locked && Input.GetKeyDown(KeyCode.E))
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }

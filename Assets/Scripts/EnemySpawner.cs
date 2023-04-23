@@ -7,6 +7,7 @@ public class EnemySpawner : MonoBehaviour
     public List<Transform> spawners;
     public List<GameObject> enemies;
     public GameObject enemyPrefab;
+    public GameObject door;
     public bool running;
     public bool spawning;
     public int currentWave;
@@ -24,6 +25,8 @@ public class EnemySpawner : MonoBehaviour
     {
         if (spawning)
         {
+            door.GetComponent<DoorController>().locked = true;
+            
             List<int> alreadySpawned = new List<int>();
             int numEnemies = Random.Range(3, 9);
             bool settingIndex = true;
@@ -67,6 +70,7 @@ public class EnemySpawner : MonoBehaviour
         {
             spawning = false;
             running = false;
+            door.GetComponent<DoorController>().locked = false;
             currentWave = 0;
         }
     }
