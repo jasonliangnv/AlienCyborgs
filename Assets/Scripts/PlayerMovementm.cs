@@ -14,6 +14,8 @@ public class PlayerMovementm : MonoBehaviour
     public Sprite moveDown;
     public Sprite moveRight;
     public Sprite moveLeft;
+    public Sprite lookRightUp;
+    public Sprite lookLeftUp;
 
     // Private varibles
 
@@ -61,15 +63,23 @@ public class PlayerMovementm : MonoBehaviour
         Vector3 direction = mousePosition - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         
-        if (angle > -45f && angle <= 45f)
+        if (angle > -45f && angle <= 22f)
         {
             spriteRenderer.sprite = moveRight;
         }
-        else if (angle > 45f && angle <= 135f)
+        else if (angle > 22f && angle <= 50f)
+        {
+            spriteRenderer.sprite = lookRightUp;
+        }
+        else if (angle > 50f && angle <= 112.5f)
         {
             spriteRenderer.sprite = moveUp;
         }
-        else if (angle > 135f || angle <= -135f)
+        else if (angle > 112.5f && angle <= 158f)
+        {
+            spriteRenderer.sprite = lookLeftUp;
+        }
+        else if (angle > 158f || angle <= -135f)
         {
             spriteRenderer.sprite = moveLeft;
         }

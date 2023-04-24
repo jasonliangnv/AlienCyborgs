@@ -25,6 +25,7 @@ public class EnemySpawner : MonoBehaviour
     {
         if (spawning)
         {
+            door.SetActive(true);
             door.GetComponent<DoorController>().locked = true;
             
             List<int> alreadySpawned = new List<int>();
@@ -71,6 +72,7 @@ public class EnemySpawner : MonoBehaviour
             spawning = false;
             running = false;
             door.GetComponent<DoorController>().locked = false;
+            door.SetActive(false);
             currentWave = 0;
         }
     }

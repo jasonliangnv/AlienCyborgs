@@ -40,7 +40,7 @@ public class ItemPickups : MonoBehaviour
             {
                 spawner.GetComponent<EnemySpawner>().running = true;
             }
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
     }
 }
