@@ -105,7 +105,7 @@ public class EnemyAiController : MonoBehaviour
             Vector2 direction = playerPos.position - transform.position;
             direction.Normalize();
             float inangle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90f;
-            transform.rotation = Quaternion.Euler(Vector3.forward * inangle);
+            //transform.rotation = Quaternion.Euler(Vector3.forward * inangle);
             return;
         }
 
@@ -139,7 +139,7 @@ public class EnemyAiController : MonoBehaviour
         Vector2 newDirection = (playerVec - currPos).normalized;
         float angle = Mathf.Atan2(newDirection.y, newDirection.x) * Mathf.Rad2Deg - 90f;
         Quaternion newRot = Quaternion.Euler(0, 0, angle);
-        transform.rotation = Quaternion.Lerp(transform.rotation, newRot, 3 * Time.deltaTime);
+        //transform.rotation = Quaternion.Lerp(transform.rotation, newRot, 3 * Time.deltaTime);
 
 
         //move toward player based on a user set distance. Ai will stop moving toward player at set distance
