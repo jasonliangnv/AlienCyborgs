@@ -16,7 +16,7 @@ public class PlayerMovementm : MonoBehaviour
     public Sprite moveLeft;
     public Sprite lookRightUp;
     public Sprite lookLeftUp;
-
+    private bool isPaused;
     // Private varibles
 
     // Players RigidBody
@@ -55,14 +55,14 @@ public class PlayerMovementm : MonoBehaviour
         //animator.SetFloat("Horizontal" , movement.x);
         //animator.SetFloat("Vertical", movement.y);
         //animator.SetFloat("Speed", movement.sqrMagnitude);
+       
 
-
-        //
-
+       
+       
         // Calculate mouse angle and change out sprite accordingly
         Vector3 direction = mousePosition - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        
+
         if (angle > -45f && angle <= 22f)
         {
             spriteRenderer.sprite = moveRight;
@@ -87,6 +87,8 @@ public class PlayerMovementm : MonoBehaviour
         {
             spriteRenderer.sprite = moveDown;
         }
+        
+      
     }
     private void FixedUpdate()
     {

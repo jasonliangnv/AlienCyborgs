@@ -31,7 +31,7 @@ public class PlayerArmController : MonoBehaviour
         mousePos.z = 0f;
         Vector3 lookDir = mousePos - armLookPoint.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
-        Debug.Log("Angle is! " + angle);
+        //Debug.Log("Angle is! " + angle);
         if (angle > -60f && angle <= -22.5f)
         {
             angle += 45f;

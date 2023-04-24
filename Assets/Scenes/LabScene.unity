@@ -7460,8 +7460,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36c214aaee2836b49b1a222ad0cf23a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paused: 0
   pauseMenuUI: {fileID: 1077548381}
+  player: {fileID: 215631661}
 --- !u!224 &1077548383
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21472,8 +21472,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36c214aaee2836b49b1a222ad0cf23a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paused: 0
   pauseMenuUI: {fileID: 1077548381}
+  player: {fileID: 215631661}
 --- !u!114 &1555126397
 MonoBehaviour:
   m_ObjectHideFlags: 0
