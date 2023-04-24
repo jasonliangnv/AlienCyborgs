@@ -64,6 +64,7 @@ public class FireBulletm : MonoBehaviour
         fireDir = mousePos - firePoint.position;
         float angle = Mathf.Atan2(fireDir.y, fireDir.x) * Mathf.Rad2Deg - 90f;
         firePoint.rotation = Quaternion.Euler(0, 0, angle);
+        Debug.DrawLine(firePoint.position, mousePos, Color.blue);
     }
 
     public void Fire()
