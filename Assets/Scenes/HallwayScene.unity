@@ -15520,7 +15520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1184978321}
-  player: {fileID: 0}
+  player: {fileID: 156627202}
 --- !u!224 &1184978323
 RectTransform:
   m_ObjectHideFlags: 0
