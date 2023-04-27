@@ -34,6 +34,10 @@ public class ItemPickups : MonoBehaviour
     {
         if (canPickUp && Input.GetKeyDown(KeyCode.E))
         {
+            if (door == null)
+            {
+                Destroy(this.gameObject);
+            }
             door.SetActive(true);
             door.GetComponent<DoorController>().locked = false;
             if (isTrigger)

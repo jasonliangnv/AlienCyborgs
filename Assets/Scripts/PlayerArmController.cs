@@ -35,7 +35,7 @@ public class PlayerArmController : MonoBehaviour
         Vector3 lookDir = mousePos - transform.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
         float sAngle = angle;
-        Debug.Log("Angle is! " + angle);
+        //Debug.Log("Angle is! " + angle);
 
         // Point gun down to the right
         if (sAngle > -60f && sAngle <= -30f)

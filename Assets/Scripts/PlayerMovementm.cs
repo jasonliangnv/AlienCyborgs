@@ -8,7 +8,7 @@ public class PlayerMovementm : MonoBehaviour
     // Public movespeed
     public float moveSpeed = 1f;
     // Characters animator
-    //public Animator animator;
+    public Animator animator;
     // Direction sprites
     public Sprite moveUp;
     public Sprite moveDown;
@@ -17,6 +17,7 @@ public class PlayerMovementm : MonoBehaviour
     public Sprite lookRightUp;
     public Sprite lookLeftUp;
     private bool isPaused;
+    private bool moved;
     // Private varibles
 
     // Players RigidBody
@@ -33,7 +34,7 @@ public class PlayerMovementm : MonoBehaviour
     {
         // Get the rigidbody component from the player gameobject
         rb = GetComponent<Rigidbody2D>();
-
+        moved = false;
         // Get sprite render component
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
@@ -45,20 +46,27 @@ public class PlayerMovementm : MonoBehaviour
         mousePosition.z = 0f; // Set the Z-coordinate to zero
 
         // Movement for A and D left right movement
+        
         movement.x = Input.GetAxisRaw("Horizontal");
 
         // Movement for W and S up down movement
         movement.y = Input.GetAxisRaw("Vertical");
-
+        if ((movement.x > 0f || movement.y > 0f) && !moved)
+        {
+            Debug.Log("moved");
+            //animator.SetBool("HasMoved", true);
+            moved = true;
+            animator.gameObject.SetActive(false);
+        }
         // Animator settings for later use
 
         //animator.SetFloat("Horizontal" , movement.x);
         //animator.SetFloat("Vertical", movement.y);
         //animator.SetFloat("Speed", movement.sqrMagnitude);
-       
 
-       
-       
+
+
+
         // Calculate mouse angle and change out sprite accordingly
         Vector3 direction = mousePosition - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
