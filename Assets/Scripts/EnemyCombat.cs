@@ -22,6 +22,7 @@ public class EnemyCombat : MonoBehaviour
     private void Start()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        fireRate = Random.Range(0.05f, 0.3f);
     }
 
     // Update is called once per frame
@@ -32,6 +33,7 @@ public class EnemyCombat : MonoBehaviour
         {
             FireBullet();
             timeSinceLastFire = 0f;
+            fireRate = Random.Range(0.05f, 0.3f);
         }
     }
     void FireBullet()
