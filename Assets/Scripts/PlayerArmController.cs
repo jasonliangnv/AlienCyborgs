@@ -25,7 +25,7 @@ public class PlayerArmController : MonoBehaviour
     private void Start()
     {
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-        spriteRenderer.sortingOrder = 3;
+        spriteRenderer.sortingOrder = 6;
 
     }
     private void LateUpdate()
@@ -41,14 +41,14 @@ public class PlayerArmController : MonoBehaviour
         if (sAngle > -60f && sAngle <= -30f)
         {
             angle += 45f;
-            spriteRenderer.sortingOrder = 3;
+            spriteRenderer.sortingOrder = 6;
             spriteRenderer.sprite = gunDownRight;
         }
         // Point gun to the right
         else if (sAngle > -30f && sAngle <= 30f)
         {
 
-            spriteRenderer.sortingOrder = 3;
+            spriteRenderer.sortingOrder = 6;
             spriteRenderer.sprite = gunRight;
         }
         // Point gun up to the right
@@ -56,7 +56,7 @@ public class PlayerArmController : MonoBehaviour
         {
 
             angle -= 45f;
-            spriteRenderer.sortingOrder = 2;
+            spriteRenderer.sortingOrder = 4;
             spriteRenderer.sprite = gunRightUp;
         }
         // Point gun up
@@ -64,28 +64,28 @@ public class PlayerArmController : MonoBehaviour
         {
 
             angle -= 90f;
-            spriteRenderer.sortingOrder = 2;
+            spriteRenderer.sortingOrder = 4;
             spriteRenderer.sprite = gunUp;
         }
         // Point gun up to the left
         else if (sAngle > 120f && sAngle <= 155f)
         {
             angle -= 135f;
-            spriteRenderer.sortingOrder = 2;
+            spriteRenderer.sortingOrder = 4;
             spriteRenderer.sprite = gunLeftUp;
         }
         // Point gun to the left
         else if (sAngle > 155f || sAngle <= -155f)
         {
             angle += 180f;
-            spriteRenderer.sortingOrder = 3;
+            spriteRenderer.sortingOrder = 6;
             spriteRenderer.sprite = gunLeft;
         }
         // Point gun down to the left
         else if (sAngle > -155f && sAngle <= -125f)
         {
             angle -= 225f;
-            spriteRenderer.sortingOrder = 3;
+            spriteRenderer.sortingOrder = 6;
             spriteRenderer.sprite = gunLeftDown;
         }
         // Point gun down
@@ -93,7 +93,7 @@ public class PlayerArmController : MonoBehaviour
         {
             angle += 90f;
 
-            spriteRenderer.sortingOrder = 3;
+            spriteRenderer.sortingOrder = 6;
             spriteRenderer.sprite = gunDown;
         }
 

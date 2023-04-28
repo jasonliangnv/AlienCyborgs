@@ -8,7 +8,8 @@ public class PlayerMovementm : MonoBehaviour
     // Public movespeed
     public float moveSpeed = 1f;
     // Characters animator
-    public Animator animator;
+    //Animator animator;
+    
     // Direction sprites
     public Sprite moveUp;
     public Sprite moveDown;
@@ -16,8 +17,7 @@ public class PlayerMovementm : MonoBehaviour
     public Sprite moveLeft;
     public Sprite lookRightUp;
     public Sprite lookLeftUp;
-    private bool isPaused;
-    private bool moved;
+    
     // Private varibles
 
     // Players RigidBody
@@ -29,35 +29,40 @@ public class PlayerMovementm : MonoBehaviour
     // Character sprite component
     private SpriteRenderer spriteRenderer;
 
+    // Can move bool for tutorial
+    public static bool canMove;
+
     // Start is called before the first frame update
     void Start()
     {
         // Get the rigidbody component from the player gameobject
         rb = GetComponent<Rigidbody2D>();
-        moved = false;
+        canMove = true;
         // Get sprite render component
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+         
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+       
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0f; // Set the Z-coordinate to zero
 
-        // Movement for A and D left right movement
-        
-        movement.x = Input.GetAxisRaw("Horizontal");
-
-        // Movement for W and S up down movement
-        movement.y = Input.GetAxisRaw("Vertical");
-        if ((movement.x > 0f || movement.y > 0f) && !moved)
+        if (canMove)
         {
-            Debug.Log("moved");
-            //animator.SetBool("HasMoved", true);
-            moved = true;
-            animator.gameObject.SetActive(false);
+            // Movement for A and D left right movement
+
+            movement.x = Input.GetAxisRaw("Horizontal");
+
+            // Movement for W and S up down movement
+            movement.y = Input.GetAxisRaw("Vertical");
         }
+       
+
+
         // Animator settings for later use
 
         //animator.SetFloat("Horizontal" , movement.x);

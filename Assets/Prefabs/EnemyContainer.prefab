@@ -131,7 +131,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5836400646138657750, guid: d94558bd4190ef54babb7acfcf5e38c1, type: 3}
   playerTransform: {fileID: 0}
   EnemyFirePoint: {fileID: 2910522306866674043}
-  bulletSpeed: 10
+  bulletSpeed: 8
   fireRate: 0.3
 --- !u!114 &2910522306894518138
 MonoBehaviour:
