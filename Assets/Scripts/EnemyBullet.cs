@@ -11,6 +11,10 @@ public class EnemyBullet : MonoBehaviour
             collision.GetComponent<PlayerHealth>().TakeDamage();
             Destroy(gameObject);
         }
+        else if(collision.CompareTag("Enemy"))
+        {
+            // This is just here so enemies aren't hit by their own bullets
+        }
         else
         {
             Destroy(gameObject);

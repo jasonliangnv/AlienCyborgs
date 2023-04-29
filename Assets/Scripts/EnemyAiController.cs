@@ -12,16 +12,19 @@ public class EnemyAiController : MonoBehaviour
     // Player game obj ref
     public GameObject player;
 
+    // Bool check if enemy is first boss
+    public bool firstBoss = false;
+
     // Enemy speed
-    public float speed = .45f;
+    public float speed;
 
     // Varibles for repelling player
-    public float pushForce = .4f;
-    public float pushDistance = .02f;
-    public float stopDistance = 2f;
-    // Way point distanace for A*
+    public float pushForce;
+    public float pushDistance;
+    public float stopDistance;
+    // Way point Distance for A*
     // Note: this should in general be <= the node size set under A*Grid gameobject
-    public float wayPointDistanace = .28f;
+    public float wayPointDistance;
 
     private Transform playerPos;
     private Path curPath;
@@ -33,6 +36,25 @@ public class EnemyAiController : MonoBehaviour
 
     private void Awake()
     {
+        if(firstBoss == true)
+        {
+            speed = 0.15f;
+            pushForce = 1f;
+            pushDistance = 0.05f;
+            stopDistance = 2f;
+            wayPointDistance = 0.28f;
+            curWayPoint = 0;
+        }
+        else
+        {
+            speed = 0.45f;
+            pushForce = 0.4f;
+            pushDistance = 0.02f;
+            stopDistance = 2f;
+            wayPointDistance = 0.28f;
+            curWayPoint = 0;
+        }
+
         // Find player
         player = GameObject.FindGameObjectWithTag("Player");
         playerPos = player.transform;
@@ -125,7 +147,7 @@ public class EnemyAiController : MonoBehaviour
         //have we reached end?
         float distance = Vector3.Distance(transform.position, curPath.vectorPath[curWayPoint]);
         
-        if (distance < wayPointDistanace)
+        if (distance < wayPointDistance)
         {
             // Update way point
             curWayPoint++;

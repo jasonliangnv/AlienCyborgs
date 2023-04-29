@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
+    // Bool check if enemy is first boss
+    public bool firstBoss = false;
+
     // Enemy HP
     private int health;
     private int mhealth;
     // Start is called before the first frame update
     void Start()
     {
-        mhealth = 3;
+        if(firstBoss)
+        {
+            mhealth = 20;
+        }
+        else
+        {
+            mhealth = 3;
+        }
     }
 
     // Update is called once per frame
@@ -28,6 +38,5 @@ public class EnemyHealth : MonoBehaviour
         {
             mhealth--;
         }
-
     }
 }
