@@ -47,7 +47,7 @@ public class EnemyAiController : MonoBehaviour
         }
         else
         {
-            speed = 0.45f;
+            speed = 1f;
             pushForce = 0.4f;
             pushDistance = 0.02f;
             stopDistance = 2f;

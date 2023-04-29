@@ -9,6 +9,7 @@ public class EnemySpawner : MonoBehaviour
     public GameObject enemyPrefab;
     public List<GameObject> exitDoor;
     public GameObject enterDoor;
+    public int minSpawn;
     public bool running;
     public bool spawning;
     public int currentWave;
@@ -35,7 +36,7 @@ public class EnemySpawner : MonoBehaviour
             enterDoor.GetComponent<DoorController>().locked = true;
 
             List<int> alreadySpawned = new List<int>();
-            int numEnemies = Random.Range(3, spawners.Count);
+            int numEnemies = Random.Range(minSpawn, spawners.Count);
             bool settingIndex = true;
 
             for(int i = 0; i<numEnemies; i++)
