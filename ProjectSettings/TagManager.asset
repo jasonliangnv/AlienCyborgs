@@ -15,9 +15,9 @@ TagManager:
   - UI
   - Bullets
   - Enemies
-  - 
-  - 
-  - 
+  - NoPostPro
+  - GlobalVol
+  - Lights
   - 
   - 
   - 
@@ -42,4 +42,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 3364715497
+    locked: 0
+  - name: PlayerArms
+    uniqueID: 4236326423
+    locked: 0
+  - name: Enemies
+    uniqueID: 3114829507
+    locked: 0
+  - name: UI
+    uniqueID: 3889097481
+    locked: 0
+  - name: walls
+    uniqueID: 2264062063
     locked: 0

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1015618794688055676}
   - component: {fileID: 3875924242618388981}
   - component: {fileID: 1393720344911139170}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -930251799
   m_SortingOrder: 20
   m_TargetDisplay: 0
 --- !u!114 &1393720344911139170
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 2831497187104233722}
   - component: {fileID: 6371817108589417527}
   - component: {fileID: 6913246565689032787}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: LockedTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 7387779055983008614}
   - component: {fileID: 5882880135211831792}
   - component: {fileID: 4078850047796046815}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: '''E'' to open'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -362,6 +362,7 @@ GameObject:
   - component: {fileID: 4798492714522848850}
   - component: {fileID: 4798492714522848851}
   - component: {fileID: 4798492714522848855}
+  - component: {fileID: 7225824137295399553}
   m_Layer: 0
   m_Name: basic_door 1
   m_TagString: Untagged
@@ -383,7 +384,7 @@ Transform:
   m_Children:
   - {fileID: 1015618794688055676}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4798492714522848849
 SpriteRenderer:
@@ -425,7 +426,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: fc94c40785b41cd49b97acdb801edff8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -449,7 +450,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec02e0650f79047448ad0f861c85873a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyPressSound: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
+  audioSource: {fileID: 7225824137295399553}
   openTxt: {fileID: 3082626637744958961}
   lockedTxt: {fileID: 1970909964249501250}
   locked: 0
@@ -543,3 +544,99 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.9, y: 1.1324197}
   m_EdgeRadius: 0
+--- !u!82 &7225824137295399553
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4798492714522848860}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

@@ -14,8 +14,8 @@ public class CamFollowm : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
 
     // Make sure to keep camera position above everything else
-    private Vector3 renderOntop = new Vector3(.87f, -.41f, -20f);
-
+    //private Vector3 renderOntop = new Vector3(.87f, -.41f, -20f);
+    private Vector3 renderOntop = new Vector3(0f, 0f, -20f);
     // Camera smoothing amount
     public float smoothRatio = 0.1f;
 

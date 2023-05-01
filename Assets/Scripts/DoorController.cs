@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
-    private AudioSource audioSource;
-    public AudioClip keyPressSound;
+    public AudioSource audioSource;
+    //public AudioClip keyPressSound;
     public GameObject openTxt;
     public GameObject lockedTxt;
     public bool locked = false;
@@ -14,9 +14,9 @@ public class DoorController : MonoBehaviour
 
         void Start()
     {
-        audioSource = gameObject.AddComponent<AudioSource>();
-        audioSource.playOnAwake = false;
-        audioSource.clip = keyPressSound;
+        //audioSource = gameObject.AddComponent<AudioSource>();
+        //audioSource.playOnAwake = false;
+        //audioSource.clip = keyPressSound;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -12,6 +12,12 @@ public class EnemyAiController : MonoBehaviour
     // Player game obj ref
     public GameObject player;
 
+    // Direction sprites
+    public Sprite moveUp;
+    public Sprite moveDown;
+    public Sprite moveRight;
+    public Sprite moveLeft;
+
     // Bool check if enemy is first boss
     public bool firstBoss = false;
 
@@ -27,6 +33,9 @@ public class EnemyAiController : MonoBehaviour
     public float wayPointDistance;
 
     private Transform playerPos;
+
+    private SpriteRenderer spriteRenderer;
+
     private Path curPath;
     private int curWayPoint = 0;
 
@@ -38,7 +47,7 @@ public class EnemyAiController : MonoBehaviour
     {
         if(firstBoss == true)
         {
-            speed = 0.15f;
+            
             pushForce = 1f;
             pushDistance = 0.05f;
             stopDistance = 2f;
@@ -53,7 +62,7 @@ public class EnemyAiController : MonoBehaviour
         // Find player
         player = GameObject.FindGameObjectWithTag("Player");
         playerPos = player.transform;
-
+        spriteRenderer = gameObject.GetComponentInChildren<SpriteRenderer>();
     }
     // Start is called before the first frame update
     void Start()
@@ -150,12 +159,27 @@ public class EnemyAiController : MonoBehaviour
         }
 
         // Get next way point // Get current transform // Calcualte direction to face along path // rotate ai smoothly to always face along path
-        Vector2 nextWayPoint = (Vector2)curPath.vectorPath[curWayPoint];
+        
         Vector2 playerVec = (Vector2)playerPos.position;
         Vector2 currPos = transform.position;
         Vector2 newDirection = (playerVec - currPos).normalized;
-        float angle = Mathf.Atan2(newDirection.y, newDirection.x) * Mathf.Rad2Deg - 90f;
-        Quaternion newRot = Quaternion.Euler(0, 0, angle);
+        float angle = Mathf.Atan2(newDirection.y, newDirection.x) * Mathf.Rad2Deg;
+        if (angle > -45f && angle <= 45f)
+        {
+            spriteRenderer.sprite = moveRight;
+        }
+        else if (angle > 45f && angle <= 135f)
+        {
+            spriteRenderer.sprite = moveUp;
+        }
+        else if (angle > 135f || angle <= -135f)
+        {
+            spriteRenderer.sprite = moveLeft;
+        }
+        else
+        {
+            spriteRenderer.sprite = moveDown;
+        }
         //transform.rotation = Quaternion.Lerp(transform.rotation, newRot, 3 * Time.deltaTime);
 
 

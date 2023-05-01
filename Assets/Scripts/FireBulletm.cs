@@ -10,6 +10,8 @@ public class FireBulletm : MonoBehaviour
     // Camera
     public Camera cam;
 
+    public float bulletSpeed;
+
     // Fire Point
     public Transform firePoint;
 
@@ -78,6 +80,6 @@ public class FireBulletm : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Physics2D.IgnoreCollision(bullet.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.AddForce(firePoint.up * 10f, ForceMode2D.Impulse);
+        rb.AddForce(firePoint.up * bulletSpeed, ForceMode2D.Impulse);
     }
 }

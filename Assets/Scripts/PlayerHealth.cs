@@ -7,18 +7,19 @@ using TMPro;
 public class PlayerHealth : MonoBehaviour
 {
     public GameObject healthBarObj;
-    public SpriteRenderer sprite;
+    //public SpriteRenderer sprite;
 
     private int maxHealth;
     private int curHealth;
     private float timer;
     private float invulFrame;
     private bool alive;
-  
+    SpriteRenderer sprite;
     HealthBar healthBar;
     // Start is called before the first frame update
     void Start()
     {
+        sprite = GetComponent<SpriteRenderer>();
         healthBar = healthBarObj.GetComponent<HealthBar>();
         maxHealth = 6;
         curHealth = maxHealth;

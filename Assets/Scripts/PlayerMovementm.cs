@@ -100,12 +100,12 @@ public class PlayerMovementm : MonoBehaviour
         {
             spriteRenderer.sprite = moveDown;
         }
-        
-      
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+
     }
     private void FixedUpdate()
     {
         // Changes the players rigidbody based on previous vector movements, multiplies by Time.fixedDeltaTime for smooth movement
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        //rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 }
