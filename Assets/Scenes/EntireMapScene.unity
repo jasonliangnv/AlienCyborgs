@@ -412,6 +412,10 @@ PrefabInstance:
       propertyPath: locked
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Prison Door
@@ -694,6 +698,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Room 5 Enter
@@ -1249,6 +1257,9 @@ MonoBehaviour:
   fullHeart: {fileID: -1028458970, guid: a2946a0db132b1947b62188f4472d93b, type: 3}
   halfHeart: {fileID: -60930486, guid: a2946a0db132b1947b62188f4472d93b, type: 3}
   emptyHeart: {fileID: -827658273, guid: a2946a0db132b1947b62188f4472d93b, type: 3}
+  loseTextObject: {fileID: 1852440412}
+  loseAudio: {fileID: 2088101405}
+  backgroundAudio: {fileID: 962954916}
   hearts:
   - {fileID: 1082988734}
   - {fileID: 1847066544}
@@ -1477,6 +1488,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Room 6 Enter
@@ -1671,6 +1686,10 @@ PrefabInstance:
       propertyPath: locked
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Room 12 Exit
@@ -4146,6 +4165,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Room 10 Enter
@@ -5393,7 +5416,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -5411,6 +5434,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 258880654}
+  - {fileID: 1852440413}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5597,6 +5621,10 @@ PrefabInstance:
       propertyPath: locked
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Room 4 Enter
@@ -6418,7 +6446,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &740216683
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6432,6 +6460,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 962954915}
+  - {fileID: 2088101404}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6785,6 +6814,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Room 7 Enter
@@ -8448,6 +8481,10 @@ PrefabInstance:
       propertyPath: locked
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Room 1 Exit
@@ -8556,6 +8593,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Room 12 Enter
@@ -37360,6 +37401,10 @@ PrefabInstance:
       propertyPath: locked
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Final Boss Room Door 2
@@ -37509,6 +37554,10 @@ PrefabInstance:
       propertyPath: locked
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Final Boss Room Door 3
@@ -37574,6 +37623,10 @@ PrefabInstance:
       propertyPath: locked
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Room 12 Exit 2
@@ -38016,6 +38069,10 @@ PrefabInstance:
       propertyPath: locked
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848851, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -38422,6 +38479,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Room 11 Enter
@@ -129807,6 +129868,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Comms Door
@@ -131301,6 +131366,10 @@ PrefabInstance:
       propertyPath: locked
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Escape Pod Room Door
@@ -131371,6 +131440,10 @@ PrefabInstance:
       propertyPath: locked
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Final Boss Room Door 1
@@ -131432,6 +131505,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Room 9 Enter
@@ -131779,6 +131856,10 @@ PrefabInstance:
       propertyPath: locked
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Boss Room 1 Enter
@@ -132574,6 +132655,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Room 8 Enter
@@ -132731,6 +132816,10 @@ PrefabInstance:
       propertyPath: locked
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Boss Room 2 Door 2
@@ -134055,6 +134144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBarObj: {fileID: 258880653}
+  sprite: {fileID: 1700881964}
 --- !u!114 &1700881960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134067,6 +134157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 370a5b2f7266d934d984611db1256b6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keyPressSound: {fileID: 8300000, guid: 01167a1df79e7a44383bc61473be1d13, type: 3}
   cam: {fileID: 1645095971}
   firePoint: {fileID: 481995109}
   bulletPrefab: {fileID: 5385334568824546489, guid: 7119254a030db324f8a6ccf0cd65ce98, type: 3}
@@ -134827,6 +134918,10 @@ PrefabInstance:
       propertyPath: locked
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Boss Room 2 Door 1
@@ -135234,6 +135329,141 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1847066542}
+  m_CullTransparentMesh: 1
+--- !u!1 &1852440412
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1852440413}
+  - component: {fileID: 1852440415}
+  - component: {fileID: 1852440414}
+  m_Layer: 5
+  m_Name: DefeatText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1852440413
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852440412}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 569235516}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 900, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1852440414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852440412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: You died...
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190335
+  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 70
+  m_fontSizeBase: 70
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 17
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1852440415
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852440412}
   m_CullTransparentMesh: 1
 --- !u!1 &1863060183
 GameObject:
@@ -136388,6 +136618,10 @@ PrefabInstance:
       propertyPath: locked
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Room 3 Enter
@@ -136652,6 +136886,139 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2088101403
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2088101404}
+  - component: {fileID: 2088101405}
+  m_Layer: 5
+  m_Name: DefeatSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2088101404
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088101403}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 740216683}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!82 &2088101405
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088101403}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: c3fdf182e0e51be4cbe46c6c49fa251b, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 49775ff0d4570d344bba35fa60ed1979, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &2101076740
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -136704,6 +137071,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Boss Room 1 Door 2
@@ -136867,6 +137238,10 @@ PrefabInstance:
       propertyPath: locked
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Room 2 Enter
