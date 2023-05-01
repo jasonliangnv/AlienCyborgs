@@ -21,7 +21,6 @@ public class PlayerArmController : MonoBehaviour
     public Sprite gunLeftDown;
     private SpriteRenderer spriteRenderer;
    
-
     private void Start()
     {
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();

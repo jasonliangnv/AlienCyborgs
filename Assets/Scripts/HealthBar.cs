@@ -12,6 +12,10 @@ public class HealthBar : MonoBehaviour
     public Sprite halfHeart;
     public Sprite emptyHeart;
 
+    public GameObject loseTextObject;
+    public AudioSource loseAudio;
+    public AudioSource backgroundAudio;
+
     public Image[] hearts;
     
     private int totalHearts;
@@ -33,9 +37,13 @@ public class HealthBar : MonoBehaviour
             totalHearts--;
             if (totalHearts < 0)
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-                Debug.Log("Player has Died!");
-                return;
+                counter = 2;
+                loseAudio.Play();
+                backgroundAudio.Stop();
+                loseTextObject.SetActive(true);
+                Invoke("ReturnToMenu", 5);
+                
+                // Place death animation here
             }
             counter = 1;
         }
@@ -46,5 +54,10 @@ public class HealthBar : MonoBehaviour
         }
        
 
+    }
+    
+    void ReturnToMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }
