@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
-  
+    private AudioSource audioSource;
+    public AudioClip keyPressSound;
     public GameObject openTxt;
     public GameObject lockedTxt;
     public bool locked = false;
 
     private bool canOpen = false;
+
+        void Start()
+    {
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.playOnAwake = false;
+        audioSource.clip = keyPressSound;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -41,6 +50,11 @@ public class DoorController : MonoBehaviour
         if (canOpen && !locked && Input.GetKeyDown(KeyCode.E))
         {
             gameObject.SetActive(false);
+        }
+        
+        if(canOpen && Input.GetKeyDown(KeyCode.E))
+        {
+            audioSource.Play();
         }
     }
 }

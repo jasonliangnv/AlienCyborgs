@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class FireBulletm : MonoBehaviour
 {
+
+    private AudioSource audioSource;
+    public AudioClip keyPressSound;
     // Camera
     public Camera cam;
 
@@ -30,7 +33,9 @@ public class FireBulletm : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.playOnAwake = false;
+        audioSource.clip = keyPressSound;
     }
 
     // Update is called once per frame
@@ -45,6 +50,7 @@ public class FireBulletm : MonoBehaviour
             {
                 Fire();
                 onCooldown = true;
+                audioSource.Play();
             }
         }
 

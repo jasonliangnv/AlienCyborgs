@@ -303,6 +303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBarObj: {fileID: 523779758}
+  sprite: {fileID: 215631667}
 --- !u!114 &215631663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,6 +316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 370a5b2f7266d934d984611db1256b6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keyPressSound: {fileID: 0}
   cam: {fileID: 1540915446}
   firePoint: {fileID: 1000976089}
   bulletPrefab: {fileID: 5385334568824546489, guid: d232bd1cfa83eaf4b86102b4470c6d43, type: 3}
