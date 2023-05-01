@@ -412,6 +412,10 @@ PrefabInstance:
       propertyPath: locked
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Prison Door
@@ -694,6 +698,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Room 5 Enter
@@ -1477,6 +1485,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Room 6 Enter
@@ -1671,6 +1683,10 @@ PrefabInstance:
       propertyPath: locked
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Room 12 Exit
@@ -4146,6 +4162,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Room 10 Enter
@@ -5597,6 +5617,10 @@ PrefabInstance:
       propertyPath: locked
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Room 4 Enter
@@ -6785,6 +6809,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Room 7 Enter
@@ -8448,6 +8476,10 @@ PrefabInstance:
       propertyPath: locked
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Room 1 Exit
@@ -8556,6 +8588,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Room 12 Enter
@@ -37360,6 +37396,10 @@ PrefabInstance:
       propertyPath: locked
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Final Boss Room Door 2
@@ -37509,6 +37549,10 @@ PrefabInstance:
       propertyPath: locked
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Final Boss Room Door 3
@@ -37574,6 +37618,10 @@ PrefabInstance:
       propertyPath: locked
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Room 12 Exit 2
@@ -38016,6 +38064,10 @@ PrefabInstance:
       propertyPath: locked
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848851, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -38422,6 +38474,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Room 11 Enter
@@ -129807,6 +129863,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Comms Door
@@ -130635,6 +130695,134 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1334240184}
   m_CullTransparentMesh: 1
+--- !u!1 &1345552801
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1345552803}
+  - component: {fileID: 1345552802}
+  m_Layer: 0
+  m_Name: space-ambient-sci-fi-121842
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1345552802
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345552801}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f584c8a4cfd257f43bc6bb2bcab7d62b, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1345552803
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345552801}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1347614210
 GameObject:
   m_ObjectHideFlags: 0
@@ -131301,6 +131489,10 @@ PrefabInstance:
       propertyPath: locked
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Escape Pod Room Door
@@ -131371,6 +131563,10 @@ PrefabInstance:
       propertyPath: locked
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Final Boss Room Door 1
@@ -131432,6 +131628,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Room 9 Enter
@@ -131779,6 +131979,10 @@ PrefabInstance:
       propertyPath: locked
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Boss Room 1 Enter
@@ -132574,6 +132778,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Room 8 Enter
@@ -132731,6 +132939,10 @@ PrefabInstance:
       propertyPath: locked
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Boss Room 2 Door 2
@@ -134067,6 +134279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 370a5b2f7266d934d984611db1256b6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keyPressSound: {fileID: 8300000, guid: 01167a1df79e7a44383bc61473be1d13, type: 3}
   cam: {fileID: 1645095971}
   firePoint: {fileID: 481995109}
   bulletPrefab: {fileID: 5385334568824546489, guid: 7119254a030db324f8a6ccf0cd65ce98, type: 3}
@@ -134827,6 +135040,10 @@ PrefabInstance:
       propertyPath: locked
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Boss Room 2 Door 1
@@ -136388,6 +136605,10 @@ PrefabInstance:
       propertyPath: locked
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Room 3 Enter
@@ -136704,6 +136925,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Boss Room 1 Door 2
@@ -136867,6 +137092,10 @@ PrefabInstance:
       propertyPath: locked
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4798492714522848850, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
+      propertyPath: keyPressSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
     - target: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
       propertyPath: m_Name
       value: Room 2 Enter

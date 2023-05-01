@@ -383,7 +383,7 @@ Transform:
   m_Children:
   - {fileID: 1015618794688055676}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4798492714522848849
 SpriteRenderer:
@@ -449,6 +449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec02e0650f79047448ad0f861c85873a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keyPressSound: {fileID: 8300000, guid: c8581599157c9fe4ebe53556d6bac252, type: 3}
   openTxt: {fileID: 3082626637744958961}
   lockedTxt: {fileID: 1970909964249501250}
   locked: 0

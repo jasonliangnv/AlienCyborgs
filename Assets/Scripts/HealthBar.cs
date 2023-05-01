@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.UI;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HealthBar : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class HealthBar : MonoBehaviour
             totalHearts--;
             if (totalHearts < 0)
             {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
                 Debug.Log("Player has Died!");
                 return;
             }
