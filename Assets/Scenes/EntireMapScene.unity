@@ -6442,7 +6442,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &740216683
 RectTransform:
   m_ObjectHideFlags: 0
@@ -134267,6 +134267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBarObj: {fileID: 258880653}
+  sprite: {fileID: 1700881964}
 --- !u!114 &1700881960
 MonoBehaviour:
   m_ObjectHideFlags: 0

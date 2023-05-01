@@ -721,7 +721,9 @@ MonoBehaviour:
   - {fileID: 1563797718}
   enemies: []
   enemyPrefab: {fileID: 2910522306894518113, guid: f52fe79ca66e8b840b6692ad3f215ebe, type: 3}
-  door: {fileID: 2112194272}
+  exitDoor: []
+  enterDoor: {fileID: 0}
+  minSpawn: 0
   running: 0
   spawning: 0
   currentWave: 0
@@ -15668,11 +15670,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &2112194272 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4798492714522848860, guid: 4f57578dc3721c74a8e2801566076b8a, type: 3}
-  m_PrefabInstance: {fileID: 1848312892}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2115880826
 GameObject:
   m_ObjectHideFlags: 0
@@ -15848,6 +15845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 370a5b2f7266d934d984611db1256b6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keyPressSound: {fileID: 0}
   cam: {fileID: 519420031}
   firePoint: {fileID: 310573276}
   bulletPrefab: {fileID: 5385334568824546489, guid: d232bd1cfa83eaf4b86102b4470c6d43, type: 3}
@@ -15883,6 +15881,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBarObj: {fileID: 1485194489}
+  sprite: {fileID: 2115880827}
 --- !u!1 &2130091119
 GameObject:
   m_ObjectHideFlags: 0
