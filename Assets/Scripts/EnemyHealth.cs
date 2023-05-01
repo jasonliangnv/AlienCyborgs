@@ -4,29 +4,13 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    // Bool check if enemy is first boss
-    public bool firstBoss = false;
-
     // Enemy HP
-    private int health;
-    private int mhealth;
-    // Start is called before the first frame update
-    void Start()
-    {
-        if(firstBoss)
-        {
-            mhealth = 20;
-        }
-        else
-        {
-            mhealth = 3;
-        }
-    }
+    public int health;
 
     // Update is called once per frame
     void Update()
     {
-        if (mhealth == 0)
+        if (health == 0)
         {
             Destroy(gameObject);
         }
@@ -36,7 +20,7 @@ public class EnemyHealth : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            mhealth--;
+            health--;
         }
     }
 }

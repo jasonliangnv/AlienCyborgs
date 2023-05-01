@@ -27,6 +27,7 @@ public class HealthBar : MonoBehaviour
       
         if (counter == 0)
         {
+            Debug.Log("Total hearts are: " + totalHearts);
             hearts[totalHearts].GetComponent<Image>().sprite = emptyHeart;
             totalHearts--;
             if (totalHearts < 0)

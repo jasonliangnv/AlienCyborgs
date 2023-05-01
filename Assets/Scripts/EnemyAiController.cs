@@ -47,11 +47,6 @@ public class EnemyAiController : MonoBehaviour
         }
         else
         {
-            speed = 1f;
-            pushForce = 0.4f;
-            pushDistance = 0.02f;
-            stopDistance = 2f;
-            wayPointDistance = 0.28f;
             curWayPoint = 0;
         }
 
@@ -183,5 +178,8 @@ public class EnemyAiController : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.DrawWireSphere(transform.position, pushDistance);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, stopDistance);
+        
     }
 }

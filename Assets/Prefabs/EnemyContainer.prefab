@@ -115,7 +115,7 @@ MonoBehaviour:
   pushForce: 4.5
   pushDistance: 1.5
   stopDistance: 4
-  wayPointDistance: 0
+  wayPointDistance: 0.28
   stopMove: 0
 --- !u!114 &2910522306894518136
 MonoBehaviour:
@@ -132,7 +132,6 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5836400646138657750, guid: d94558bd4190ef54babb7acfcf5e38c1, type: 3}
   playerTransform: {fileID: 0}
   EnemyFirePoint: {fileID: 2910522306866674043}
-  firstBoss: 0
   bulletSpeed: 8
   fireRate: 0.3
 --- !u!114 &2910522306894518138
@@ -147,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa5e06f6058326240a8941d06b2c0954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstBoss: 0
+  health: 3
 --- !u!61 &6065144680292763496
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -265,7 +264,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 48d2b163f58b90f4183aa6f873db67d3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

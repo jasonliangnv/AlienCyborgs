@@ -10,8 +10,6 @@ public class EnemyCombat : MonoBehaviour
     // Direction the bullet fires in
     Vector3 fireDir;
 
-    // Bool check if enemy is first boss
-    public bool firstBoss = false;
 
     // Initial direction and position of the bullet
     Vector3 initialPosition;
@@ -21,25 +19,10 @@ public class EnemyCombat : MonoBehaviour
     public float fireRate;
 
     private float timeSinceLastFire = 0f;
-    
-    // Checks how many normal attacks the boss has made
-    private int attackTracker = 0;
 
     private void Start()
     {
-
-        // Different stat blocks for bosses vs regular enemies
-        if(firstBoss)
-        {
-            bulletSpeed = 1.5f;
-            fireRate = 5f;
-        }
-        else
-        {
-            bulletSpeed = 10f;
-            fireRate = Random.Range(0.05f, 0.3f);
-        }
-
+        fireRate = Random.Range(0.1f, 0.3f);
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
@@ -51,26 +34,6 @@ public class EnemyCombat : MonoBehaviour
         {
             FireBullet();
             timeSinceLastFire = 0f;
-
-            // Different fire rate changes for bosses vs regular enemies
-            if(firstBoss && attackTracker < 10)
-            {
-                fireRate = 5f;
-                attackTracker++;
-            }
-            // Fires a special fast bullet every 10 attacks
-            else if(firstBoss && attackTracker == 10)
-            {
-                bulletSpeed = 10f;
-                FireTripleBullet();
-
-                bulletSpeed = 1f;
-                attackTracker = 0;
-            }
-            else
-            {
-                fireRate = Random.Range(0.05f, 0.3f);
-            }
             
         }
     }
@@ -80,26 +43,5 @@ public class EnemyCombat : MonoBehaviour
         direction.Normalize();
         GameObject bullet = Instantiate(bulletPrefab, EnemyFirePoint.position, EnemyFirePoint.rotation);
         bullet.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
-    }
-
-    void FireTripleBullet()
-    {
-        // Saves user position so shotgun spread is more consistent
-        Vector3 position = playerTransform.position;
-
-        Vector3 direction = position - transform.position;
-        direction.Normalize();
-        GameObject bullet1 = Instantiate(bulletPrefab, EnemyFirePoint.position, EnemyFirePoint.rotation);
-        bullet1.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;       
-
-        direction = (position + new Vector3(3,3,0)) - transform.position;
-        direction.Normalize();
-        GameObject bullet2 = Instantiate(bulletPrefab, EnemyFirePoint.position, EnemyFirePoint.rotation);
-        bullet2.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;   
-
-        direction = (position + new Vector3(-3,-3,0)) - transform.position;
-        direction.Normalize();
-        GameObject bullet3 = Instantiate(bulletPrefab, EnemyFirePoint.position, EnemyFirePoint.rotation);
-        bullet3.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;   
     }
 }
