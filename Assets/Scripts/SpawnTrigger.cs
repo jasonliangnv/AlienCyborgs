@@ -15,8 +15,7 @@ public class SpawnTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-
-        if(!hasTriggered)
+        if(!hasTriggered && other.CompareTag("Player"))
         {
             hasTriggered = true;
             spawner.running = true;

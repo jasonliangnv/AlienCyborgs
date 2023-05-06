@@ -17,8 +17,11 @@ public class PlayerMovementm : MonoBehaviour
     public Sprite moveLeft;
     public Sprite lookRightUp;
     public Sprite lookLeftUp;
-    
+
     // Private varibles
+    // variables to buffer dashing
+    float dashTimer;
+    float dashBuffer = 1.5f;
 
     // Players RigidBody
     Rigidbody2D rb;
@@ -101,6 +104,21 @@ public class PlayerMovementm : MonoBehaviour
             spriteRenderer.sprite = moveDown;
         }
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+
+        if (Input.GetKeyDown(KeyCode.Space) && canMove && (dashTimer >= dashBuffer))
+        {
+            Vector2 dir = new Vector2(direction.x, direction.y);
+
+            if(movement != Vector2.zero)
+                rb.MovePosition(rb.position + movement.normalized * 4);
+            else
+                rb.MovePosition(rb.position + dir.normalized * 4);
+
+            dashTimer = 0;
+        }
+
+        if(dashTimer < dashBuffer)
+            dashTimer += Time.deltaTime;
 
     }
     private void FixedUpdate()
