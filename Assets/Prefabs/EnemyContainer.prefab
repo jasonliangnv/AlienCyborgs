@@ -152,6 +152,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
+  isBoss: 0
+  healthBar: {fileID: 4854490164167250308, guid: 2112074f16295ce42ad7fa3a45e19ad7, type: 3}
 --- !u!61 &6065144680292763496
 BoxCollider2D:
   m_ObjectHideFlags: 0

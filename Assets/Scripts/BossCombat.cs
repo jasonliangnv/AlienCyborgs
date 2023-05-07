@@ -51,31 +51,31 @@ public class BossCombat : MonoBehaviour
                 attackTracker3++;
             }
             // Fires a special fast bullet every 10 attacks and when HP is below 90%
-            else if (attackTracker1 >= 10 && ((float)GetComponent<EnemyHealth>().health/totalHealth)*100 <= 90)
-            {
-                bulletSpeed = 10f;
-                FireTripleBullet();
-
-                bulletSpeed = 0.5f;
-                attackTracker1 = 0;
-            }
-            
-            // Fires special attacks at 75% HP or below
-            if(attackTracker2 >= 2 && ((float)GetComponent<EnemyHealth>().health/totalHealth)*100 <= 75)
+            else if (attackTracker1 >= 2 && ((float)GetComponent<EnemyHealth>().health/totalHealth)*100 <= 90)
             {
                 bulletSpeed = 5f;
 
                 FireRandomBullet();
                 
                 bulletSpeed = 0.5f;
+                attackTracker1 = 0;
+            }
+            
+            // Fires special attacks at 80% HP or below
+            if(attackTracker2 >= 10 && ((float)GetComponent<EnemyHealth>().health/totalHealth)*100 <= 80)
+            {
+                bulletSpeed = 10f;
+                FireTripleBullet();
+
+                bulletSpeed = 0.5f;
                 attackTracker2 = 0;
             }
 
             
-            // Fires special attacks at 50% HP or below
-            if(attackTracker3 >= 5 && ((float)GetComponent<EnemyHealth>().health/totalHealth)*100 <= 50)
+            // Fires special attacks at 60% HP or below
+            if(attackTracker3 >= 5 && ((float)GetComponent<EnemyHealth>().health/totalHealth)*100 <= 60)
             {
-                GetComponent<EnemyAiController>().speed = 1;
+                GetComponent<EnemyAiController>().speed = 1.5f;
                 bulletSpeed = 0f;
 
                 BulletMine();

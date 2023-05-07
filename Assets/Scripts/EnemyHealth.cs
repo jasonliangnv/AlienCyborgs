@@ -7,12 +7,27 @@ public class EnemyHealth : MonoBehaviour
     // Enemy HP
     public int health;
 
+    public bool isBoss = false;
+    
+    private GameObject healthBar;
+
+    void Start()
+    {
+        if(isBoss)
+        {
+            healthBar = GameObject.Find("BossHealthBar");
+            healthBar.SetActive(true);
+            healthBar.GetComponent<EnemyHealthBar>().SetMaxHealth(health);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (health == 0)
         {
             Destroy(gameObject);
+            healthBar.SetActive(false);
         }
     }
 
@@ -21,6 +36,7 @@ public class EnemyHealth : MonoBehaviour
         if (collision.gameObject.tag == "Bullet")
         {
             health--;
+            healthBar.GetComponent<EnemyHealthBar>().SetHealth(health);
         }
     }
 }
