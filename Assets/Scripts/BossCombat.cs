@@ -61,7 +61,7 @@ public class BossCombat : MonoBehaviour
             }
             
             // Fires special attacks at 75% HP or below
-            if(attackTracker2 >= 5 && ((float)GetComponent<EnemyHealth>().health/totalHealth)*100 <= 75)
+            if(attackTracker2 >= 2 && ((float)GetComponent<EnemyHealth>().health/totalHealth)*100 <= 75)
             {
                 bulletSpeed = 5f;
 
