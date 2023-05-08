@@ -17,14 +17,11 @@ public class EnemyHealth : MonoBehaviour
     {
         if(isBoss)
         {
-            Instantiate(canvas);
+            canvas = Instantiate(canvas);
             canvas.SetActive(true);
             healthBar = GameObject.Find("HealthBar");
-            Debug.Log("done");
             healthBar.SetActive(true);
-            Debug.Log("done");
             healthBar.GetComponent<EnemyHealthBar>().SetMaxHealth(health);
-            Debug.Log("done");
         }
     }
 
@@ -33,8 +30,8 @@ public class EnemyHealth : MonoBehaviour
     {
         if (health == 0)
         {
+            Destroy(canvas);
             Destroy(gameObject);
-            healthBar.SetActive(false);
         }
     }
 
