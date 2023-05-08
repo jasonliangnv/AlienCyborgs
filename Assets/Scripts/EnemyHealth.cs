@@ -9,15 +9,22 @@ public class EnemyHealth : MonoBehaviour
 
     public bool isBoss = false;
     
+    public GameObject canvas;
+
     private GameObject healthBar;
 
     void Start()
     {
         if(isBoss)
         {
-            healthBar = GameObject.Find("BossHealthBar");
+            Instantiate(canvas);
+            canvas.SetActive(true);
+            healthBar = GameObject.Find("HealthBar");
+            Debug.Log("done");
             healthBar.SetActive(true);
+            Debug.Log("done");
             healthBar.GetComponent<EnemyHealthBar>().SetMaxHealth(health);
+            Debug.Log("done");
         }
     }
 

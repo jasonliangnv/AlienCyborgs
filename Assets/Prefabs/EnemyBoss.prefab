@@ -135,7 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   isBoss: 1
-  healthBar: {fileID: 4854490164167250308, guid: 2112074f16295ce42ad7fa3a45e19ad7, type: 3}
+  canvas: {fileID: 5038726176490198566, guid: 8fb8bc16bb0ce5b4397c411315a34ed3, type: 3}
 --- !u!114 &310642687021370273
 MonoBehaviour:
   m_ObjectHideFlags: 0
