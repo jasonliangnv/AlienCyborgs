@@ -30,7 +30,11 @@ public class EnemyHealth : MonoBehaviour
     {
         if (health == 0)
         {
-            Destroy(canvas);
+            if(isBoss)
+            {
+                Destroy(canvas);
+            }
+            
             Destroy(gameObject);
         }
     }
@@ -40,7 +44,11 @@ public class EnemyHealth : MonoBehaviour
         if (collision.gameObject.tag == "Bullet")
         {
             health--;
-            healthBar.GetComponent<EnemyHealthBar>().SetHealth(health);
+
+            if(isBoss)
+            {
+                healthBar.GetComponent<EnemyHealthBar>().SetHealth(health);
+            }
         }
     }
 }

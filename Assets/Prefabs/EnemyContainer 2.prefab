@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 2910522306894518138}
   - component: {fileID: 6065144680292763496}
   m_Layer: 0
-  m_Name: EnemyContainer
+  m_Name: EnemyContainer 2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -116,7 +116,7 @@ MonoBehaviour:
   moveRight: {fileID: -1379204870, guid: e52d298ae02a8a64a962f5bea7e7e59f, type: 3}
   moveLeft: {fileID: -590241944, guid: e52d298ae02a8a64a962f5bea7e7e59f, type: 3}
   firstBoss: 0
-  speed: 2
+  speed: 3
   pushForce: 4.5
   pushDistance: 1.5
   stopDistance: 4.12
@@ -137,8 +137,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5836400646138657750, guid: d94558bd4190ef54babb7acfcf5e38c1, type: 3}
   playerTransform: {fileID: 0}
   EnemyFirePoint: {fileID: 2910522306866674043}
-  enemyType: 1
-  bulletSpeed: 8
+  enemyType: 2
+  bulletSpeed: 4
   fireRate: 0.3
 --- !u!114 &2910522306894518138
 MonoBehaviour:
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa5e06f6058326240a8941d06b2c0954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 5
   isBoss: 0
   canvas: {fileID: 5038726176490198566, guid: 8fb8bc16bb0ce5b4397c411315a34ed3, type: 3}
 --- !u!61 &6065144680292763496
