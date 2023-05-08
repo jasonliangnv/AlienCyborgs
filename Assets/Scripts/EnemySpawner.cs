@@ -6,7 +6,7 @@ public class EnemySpawner : MonoBehaviour
 {
     public List<Transform> spawners;
     public List<GameObject> enemies;
-    public GameObject enemyPrefab;
+    public List<GameObject> enemyPrefab;
     public List<GameObject> exitDoor;
     public GameObject enterDoor;
     public int minSpawn;
@@ -52,7 +52,8 @@ public class EnemySpawner : MonoBehaviour
                     }
                 }
                 
-                GameObject enemy = Instantiate(enemyPrefab, spawners[spawnerIndex].position, Quaternion.identity);
+                int enemyIndex = Random.Range(0, enemyPrefab.Count);
+                GameObject enemy = Instantiate(enemyPrefab[enemyIndex], spawners[spawnerIndex].position, Quaternion.identity);
                 enemies.Add(enemy);
                 settingIndex = true;
             }
