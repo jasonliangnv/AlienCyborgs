@@ -116,10 +116,10 @@ MonoBehaviour:
   moveRight: {fileID: -1379204870, guid: e52d298ae02a8a64a962f5bea7e7e59f, type: 3}
   moveLeft: {fileID: -590241944, guid: e52d298ae02a8a64a962f5bea7e7e59f, type: 3}
   firstBoss: 0
-  speed: 3
+  speed: 2.5
   pushForce: 4.5
   pushDistance: 1.5
-  stopDistance: 4.12
+  stopDistance: 4.75
   wayPointDistance: 0.28
   stopMove: 0
 --- !u!114 &2910522306894518136

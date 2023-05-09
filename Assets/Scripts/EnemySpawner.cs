@@ -9,6 +9,7 @@ public class EnemySpawner : MonoBehaviour
     public List<GameObject> enemyPrefab;
     public List<GameObject> exitDoor;
     public GameObject enterDoor;
+    public GameObject nextRoom;
     public int minSpawn;
     public bool running;
     public bool spawning;
@@ -18,6 +19,7 @@ public class EnemySpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        nextRoom.SetActive(false);
         spawning = false;
         currentWave = 0;
     }
@@ -32,7 +34,17 @@ public class EnemySpawner : MonoBehaviour
                 exitDoor[i].SetActive(true);
                 exitDoor[i].GetComponent<DoorController>().locked = true;
             }
-            enterDoor.SetActive(true);
+            //enterDoor.SetActive(true);
+            SpriteRenderer spriteRenderer = enterDoor.GetComponent<SpriteRenderer>();
+
+            // Turn off the SpriteRenderer component
+            spriteRenderer.enabled = true;
+
+            // Get the GameObject's Collider component
+            Collider2D collider = enterDoor.GetComponent<Collider2D>();
+
+            // Turn off the Collider component
+            collider.enabled = true;
             enterDoor.GetComponent<DoorController>().locked = true;
 
             List<int> alreadySpawned = new List<int>();
@@ -77,11 +89,13 @@ public class EnemySpawner : MonoBehaviour
 
         if(currentWave > numWaves)
         {
+            nextRoom.SetActive(true);
             spawning = false;
             running = false;
             for (int i = 0; i < exitDoor.Count; i++)
                 exitDoor[i].GetComponent<DoorController>().locked = false;
-            enterDoor.SetActive(false);
+            //enterDoor.SetActive(false);
+            enterDoor.GetComponent<DoorController>().locked = false;
             currentWave = 0;
         }
     }

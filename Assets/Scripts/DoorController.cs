@@ -11,8 +11,9 @@ public class DoorController : MonoBehaviour
     public bool locked = false;
 
     private bool canOpen = false;
+    private bool doorOpend = false;
 
-        void Start()
+    void Start()
     {
         //audioSource = gameObject.AddComponent<AudioSource>();
         //audioSource.playOnAwake = false;
@@ -40,6 +41,21 @@ public class DoorController : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            if (doorOpend) {
+
+                SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+
+                // Turn off the SpriteRenderer component
+                spriteRenderer.enabled = true;
+
+                // Get the GameObject's Collider component
+                Collider2D collider = gameObject.GetComponent<Collider2D>();
+
+                // Turn off the Collider component
+                collider.enabled = true;
+
+                doorOpend = false;
+            }
             canOpen = false;
             openTxt.SetActive(false);
             lockedTxt.SetActive(false);
@@ -49,7 +65,19 @@ public class DoorController : MonoBehaviour
     {
         if (canOpen && !locked && Input.GetKeyDown(KeyCode.E))
         {
-            gameObject.SetActive(false);
+            SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+
+            // Turn off the SpriteRenderer component
+            spriteRenderer.enabled = false;
+
+            // Get the GameObject's Collider component
+            Collider2D collider = gameObject.GetComponent<Collider2D>();
+
+            // Turn off the Collider component
+            collider.enabled = false;
+
+            doorOpend = true;
+            openTxt.SetActive(false);
         }
         
         if(canOpen && Input.GetKeyDown(KeyCode.E))

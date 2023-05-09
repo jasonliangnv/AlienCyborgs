@@ -7,10 +7,15 @@ public class ItemPickups : MonoBehaviour
     public GameObject itemHighlight;
     public GameObject pickUpTxt;
     public GameObject spawner;
-    public GameObject door;
+    public GameObject[] doors;
 
     public bool isTrigger;
 
+    int numOfDoors;
+    private void Start()
+    {
+        numOfDoors = doors.Length;
+    }
     private bool canPickUp = false;
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -34,12 +39,16 @@ public class ItemPickups : MonoBehaviour
     {
         if (canPickUp && Input.GetKeyDown(KeyCode.E))
         {
-            if (door == null)
+            if (doors == null)
             {
                 Destroy(this.gameObject);
             }
-            door.SetActive(true);
-            door.GetComponent<DoorController>().locked = false;
+            for (int i = 0; i < numOfDoors; i++)
+            {
+                doors[i].SetActive(true);
+                doors[i].GetComponent<DoorController>().locked = false;
+            }
+            
             if (isTrigger)
             {
                 spawner.GetComponent<EnemySpawner>().running = true;

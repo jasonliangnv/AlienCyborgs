@@ -48,8 +48,8 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.533
-  m_Color: {r: 0.8207547, g: 0.29036134, b: 0.29036134, a: 1}
-  m_Intensity: 1.64
+  m_Color: {r: 0.50653756, g: 0.81960785, b: 0.29019606, a: 1}
+  m_Intensity: 0.85
   m_LightVolumeIntensity: 0.01
   m_LightVolumeIntensityEnabled: 1
   m_ApplyToSortingLayers: 00000000e97b8dc8173681fcc386a8b909ebcee76fd8f286
@@ -188,7 +188,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 20
-  m_Sprite: {fileID: 21300000, guid: c8334f3b74a94c54d8a59fa244c75f2d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c07d889df6fbd6a48b8527c1be9575d2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -233,7 +233,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.18
+  m_Radius: 0.23
 --- !u!50 &4347335956088881991
 Rigidbody2D:
   serializedVersion: 4

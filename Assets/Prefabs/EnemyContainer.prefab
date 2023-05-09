@@ -138,7 +138,7 @@ MonoBehaviour:
   playerTransform: {fileID: 0}
   EnemyFirePoint: {fileID: 2910522306866674043}
   enemyType: 1
-  bulletSpeed: 8
+  bulletSpeed: 4
   fireRate: 0.3
 --- !u!114 &2910522306894518138
 MonoBehaviour:
