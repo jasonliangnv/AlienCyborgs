@@ -18,10 +18,13 @@ public class PlayerMovementm : MonoBehaviour
     public Sprite lookRightUp;
     public Sprite lookLeftUp;
 
+    public GameObject dashIcon;
+
     // Private varibles
     // variables to buffer dashing
     float dashTimer;
     float dashBuffer = 1.5f;
+    bool dashCooldown = false;
 
     // Players RigidBody
     Rigidbody2D rb;
@@ -43,8 +46,6 @@ public class PlayerMovementm : MonoBehaviour
         canMove = true;
         // Get sprite render component
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-         
-        
     }
 
     // Update is called once per frame
@@ -105,16 +106,35 @@ public class PlayerMovementm : MonoBehaviour
         }
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
 
+        Vector2 dir = new Vector2(direction.x, direction.y);
+
         if (Input.GetKeyDown(KeyCode.Space) && canMove && (dashTimer >= dashBuffer))
         {
-            Vector2 dir = new Vector2(direction.x, direction.y);
-
             if(movement != Vector2.zero)
-                rb.MovePosition(rb.position + movement.normalized * 4);
+                rb.position = Vector2.MoveTowards(rb.position, rb.position + movement.normalized * 4, 4);
             else
-                rb.MovePosition(rb.position + dir.normalized * 4);
+                rb.position = Vector2.MoveTowards(rb.position, rb.position + dir.normalized * 4, 4);
 
             dashTimer = 0;
+            dashCooldown = true;
+            dashIcon.SetActive(false);
+        }
+
+        if (dashTimer >= dashBuffer)
+        {
+            if(dashCooldown == true)
+            {
+                StartCoroutine(FlashCD());
+                dashCooldown = false;
+                dashIcon.SetActive(true);
+            }
+            else
+            {
+                if(movement != Vector2.zero)
+                    dashIcon.transform.position = rb.position + movement.normalized * 4;
+                else
+                    dashIcon.transform.position = rb.position + dir.normalized * 4;
+            }
         }
 
         if(dashTimer < dashBuffer)
@@ -125,5 +145,13 @@ public class PlayerMovementm : MonoBehaviour
     {
         // Changes the players rigidbody based on previous vector movements, multiplies by Time.fixedDeltaTime for smooth movement
         //rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+    }
+
+    // lets the player know that their dash is back up
+    public IEnumerator FlashCD()
+    {
+        spriteRenderer.color = Color.green;
+        yield return new WaitForSeconds(0.25f);
+        spriteRenderer.color = Color.white;
     }
 }
