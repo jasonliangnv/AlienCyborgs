@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa5e06f6058326240a8941d06b2c0954, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 5
   isBoss: 0
   canvas: {fileID: 5038726176490198566, guid: 8fb8bc16bb0ce5b4397c411315a34ed3, type: 3}
 --- !u!61 &6065144680292763496
