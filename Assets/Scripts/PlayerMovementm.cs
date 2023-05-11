@@ -19,12 +19,15 @@ public class PlayerMovementm : MonoBehaviour
     public Sprite lookLeftUp;
 
     public GameObject dashIcon;
+    public bool dashing = false;
 
     // Private varibles
     // variables to buffer dashing
     float dashTimer;
     float dashBuffer = 1.5f;
     bool dashCooldown = false;
+    Vector2 dashPosition;
+    Vector2 dashIndicator;
 
     // Players RigidBody
     Rigidbody2D rb;
@@ -63,6 +66,11 @@ public class PlayerMovementm : MonoBehaviour
 
             // Movement for W and S up down movement
             movement.y = Input.GetAxisRaw("Vertical");
+        }
+        else
+        {
+            movement.x = 0;
+            movement.y = 0;
         }
        
 
@@ -108,13 +116,22 @@ public class PlayerMovementm : MonoBehaviour
 
         Vector2 dir = new Vector2(direction.x, direction.y);
 
+        if(movement != Vector2.zero)
+            dashIndicator = rb.position + movement.normalized * 4;
+        else
+            dashIndicator = rb.position + dir.normalized * 4;
+
         if (Input.GetKeyDown(KeyCode.Space) && canMove && (dashTimer >= dashBuffer))
         {
-            if(movement != Vector2.zero)
-                rb.position = Vector2.MoveTowards(rb.position, rb.position + movement.normalized * 4, 4);
-            else
-                rb.position = Vector2.MoveTowards(rb.position, rb.position + dir.normalized * 4, 4);
+            dashing = true;
+            StartCoroutine(FlashInvul());
 
+            if(movement != Vector2.zero)
+                dashPosition = dashIndicator;
+            else
+                dashPosition = dashIndicator;
+
+            // Resets cooldown and hides dash icon
             dashTimer = 0;
             dashCooldown = true;
             dashIcon.SetActive(false);
@@ -122,23 +139,32 @@ public class PlayerMovementm : MonoBehaviour
 
         if (dashTimer >= dashBuffer)
         {
+            // Turns cooldown off and shows the dash icon again
             if(dashCooldown == true)
             {
                 StartCoroutine(FlashCD());
                 dashCooldown = false;
                 dashIcon.SetActive(true);
             }
+            // Updates the dash icon
             else
             {
-                if(movement != Vector2.zero)
-                    dashIcon.transform.position = rb.position + movement.normalized * 4;
-                else
-                    dashIcon.transform.position = rb.position + dir.normalized * 4;
+                dashIcon.transform.position = dashIndicator;
             }
         }
 
         if(dashTimer < dashBuffer)
             dashTimer += Time.deltaTime;
+
+        if(Vector3.Distance(rb.position, dashPosition) <= 0.25f || dashTimer >= 0.6f)
+        {
+            dashing = false;
+        }
+        else if(dashing)
+        {
+            // Dash movement
+            rb.position = Vector2.MoveTowards(rb.position, dashPosition, 2.75f * Time.fixedDeltaTime);
+        }
 
     }
     private void FixedUpdate()
@@ -153,5 +179,12 @@ public class PlayerMovementm : MonoBehaviour
         spriteRenderer.color = Color.green;
         yield return new WaitForSeconds(0.25f);
         spriteRenderer.color = Color.white;
+    }
+
+    public IEnumerator FlashInvul()
+    {
+        spriteRenderer.color = Color.yellow;
+        yield return new WaitForSeconds(0.6f);
+        spriteRenderer.color = Color.white;        
     }
 }

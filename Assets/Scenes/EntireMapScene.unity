@@ -1342,6 +1342,7 @@ MonoBehaviour:
   lookRightUp: {fileID: -2044253658, guid: e5c1c9a754985924a8a4155dbc66a556, type: 3}
   lookLeftUp: {fileID: -1501709767, guid: e5c1c9a754985924a8a4155dbc66a556, type: 3}
   dashIcon: {fileID: 212033424}
+  dashing: 0
 --- !u!61 &114192105
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -71559,7 +71560,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &740216683
 RectTransform:
   m_ObjectHideFlags: 0

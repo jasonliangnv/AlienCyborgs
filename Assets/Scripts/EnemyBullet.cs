@@ -8,8 +8,11 @@ public class EnemyBullet : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<PlayerHealth>().TakeDamage();
-            Destroy(gameObject);
+            if(collision.GetComponent<PlayerMovementm>().dashing == false)
+            {
+                collision.GetComponent<PlayerHealth>().TakeDamage();
+                Destroy(gameObject);
+            }
         }
         else if(collision.CompareTag("Enemy"))
         {
