@@ -24,7 +24,7 @@ public class PlayerMovementm : MonoBehaviour
     // Private varibles
     // variables to buffer dashing
     float dashTimer;
-    float dashBuffer = 1.5f;
+    float dashBuffer = 2.5f;
     bool dashCooldown = false;
     Vector2 dashPosition;
     Vector2 dashIndicator;
