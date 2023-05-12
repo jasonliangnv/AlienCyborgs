@@ -9,7 +9,7 @@ public class DoorController : MonoBehaviour
     //public AudioClip keyPressSound;
     public GameObject openTxt;
     public GameObject lockedTxt;
-    public bool locked = false;
+    public bool locked;
     public AnimationClip closeClip;
     public AnimationClip openClip;
     Animator animator;
@@ -43,7 +43,7 @@ public class DoorController : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            if (doorOpened) {
+            if (doorOpened && canOpen) {
                 
                 animator.Play(closeClip.name, doorLayerIndex, 0f);
                 doorOpened = false;
