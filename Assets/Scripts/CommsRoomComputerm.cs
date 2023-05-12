@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Presets;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CommsRoomComputerm : MonoBehaviour
 {
     public GameObject screenHighlight;
     public GameObject canvas;
+    public GameObject tileMap;
+    public GameObject escapePodTiles;
+    public CameraShake shake;
+    public bool escapePod = false;
     Animator animator;
 
     private bool canPlay;
@@ -18,11 +23,24 @@ public class CommsRoomComputerm : MonoBehaviour
         canvas.SetActive(false);
         canPlay = false;
         pressed = false;
+        shake.start = false;
         animator.enabled = false;
     }
     void Update()
     {
-        if (Input.GetKey(KeyCode.E) && canPlay && !pressed){
+        if (Input.GetKey(KeyCode.E) && canPlay && !pressed && escapePod == true){
+            //animator.Play("Image");
+            pressed = true;
+            canvas.SetActive(true);
+            animator.enabled = true;
+            screenHighlight.SetActive(false);
+            PlayerMovementm.canMove = false;
+            tileMap.SetActive(false);
+            escapePodTiles.SetActive(true);
+            shake.start = true;
+            StartCoroutine(loadWinScreen());
+        }
+        else if (Input.GetKey(KeyCode.E) && canPlay && !pressed){
             //animator.Play("Image");
             pressed = true;
             canvas.SetActive(true);
@@ -55,5 +73,11 @@ public class CommsRoomComputerm : MonoBehaviour
             screenHighlight.SetActive(false);
 
         }
+    }
+
+    public IEnumerator loadWinScreen()
+    {
+        yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

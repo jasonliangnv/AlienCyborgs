@@ -5,6 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    private bool loading = false;
+
+    void Update()
+    {
+        if(SceneManager.GetActiveScene().buildIndex == 2 && loading == false)
+        {
+            loading = true;
+            StartCoroutine(loadMainMenu());
+        }
+    }
+
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -13,5 +24,11 @@ public class MainMenu : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public IEnumerator loadMainMenu()
+    {
+        yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene(0);
     }
 }
