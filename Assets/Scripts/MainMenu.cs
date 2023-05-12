@@ -29,6 +29,7 @@ public class MainMenu : MonoBehaviour
     public IEnumerator loadMainMenu()
     {
         yield return new WaitForSeconds(5f);
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
         SceneManager.LoadScene(0);
     }
 }
