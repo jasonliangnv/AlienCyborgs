@@ -7,7 +7,7 @@ public class CommsRoomComputerm : MonoBehaviour
 {
     public GameObject screenHighlight;
     public GameObject canvas;
-   Animator animator;
+    Animator animator;
 
     private bool canPlay;
     private bool pressed;

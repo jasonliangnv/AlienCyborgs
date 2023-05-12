@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class DoorController : MonoBehaviour
@@ -9,15 +10,16 @@ public class DoorController : MonoBehaviour
     public GameObject openTxt;
     public GameObject lockedTxt;
     public bool locked = false;
-
+    public AnimationClip closeClip;
+    public AnimationClip openClip;
+    Animator animator;
     private bool canOpen = false;
-    private bool doorOpend = false;
-
+    private bool doorOpened = false;
+    private int doorLayerIndex = -1;
     void Start()
     {
-        //audioSource = gameObject.AddComponent<AudioSource>();
-        //audioSource.playOnAwake = false;
-        //audioSource.clip = keyPressSound;
+        animator = GetComponent<Animator>();
+        animator.enabled = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -41,20 +43,10 @@ public class DoorController : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            if (doorOpend) {
-
-                SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-
-                // Turn off the SpriteRenderer component
-                spriteRenderer.enabled = true;
-
-                // Get the GameObject's Collider component
-                Collider2D collider = gameObject.GetComponent<Collider2D>();
-
-                // Turn off the Collider component
-                collider.enabled = true;
-
-                doorOpend = false;
+            if (doorOpened) {
+                
+                animator.Play(closeClip.name, doorLayerIndex, 0f);
+                doorOpened = false;
             }
             canOpen = false;
             openTxt.SetActive(false);
@@ -65,24 +57,12 @@ public class DoorController : MonoBehaviour
     {
         if (canOpen && !locked && Input.GetKeyDown(KeyCode.E))
         {
-            SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-
-            // Turn off the SpriteRenderer component
-            spriteRenderer.enabled = false;
-
-            // Get the GameObject's Collider component
-            Collider2D collider = gameObject.GetComponent<Collider2D>();
-
-            // Turn off the Collider component
-            collider.enabled = false;
-
-            doorOpend = true;
-            openTxt.SetActive(false);
-        }
-        
-        if(canOpen && Input.GetKeyDown(KeyCode.E))
-        {
             audioSource.Play();
+            animator.enabled = true;
+            animator.Play(openClip.name, doorLayerIndex, 0f);
+            doorOpened = true;
+            openTxt.SetActive(false);
+            
         }
     }
 }
