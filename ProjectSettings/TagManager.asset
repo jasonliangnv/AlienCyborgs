@@ -58,3 +58,6 @@ TagManager:
   - name: walls
     uniqueID: 2264062063
     locked: 0
+  - name: blockbox
+    uniqueID: 3110883121
+    locked: 0
