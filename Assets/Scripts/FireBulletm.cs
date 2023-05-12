@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class FireBulletm : MonoBehaviour
 {
 
     private AudioSource audioSource;
     public AudioClip keyPressSound;
+    public AudioMixerGroup group;
     // Camera
     public Camera cam;
 
@@ -38,6 +40,7 @@ public class FireBulletm : MonoBehaviour
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.playOnAwake = false;
         audioSource.clip = keyPressSound;
+        audioSource.outputAudioMixerGroup = group;
     }
 
     // Update is called once per frame
